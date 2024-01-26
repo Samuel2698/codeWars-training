@@ -41,3 +41,28 @@ let resultat3 = disemvowel3('This website is for losers LOL!')
 console.log(resultat3)
 
 console.timeEnd('disemvowel3')
+
+const vocales = 'aeiouáéíóúäëïöüàèìòùâêîôû'
+function disemvowel4(str) {
+  return str
+    .split('')
+    .filter((letter) => !vocales.includes(letter.toLowerCase()))
+    .join('')
+}
+
+console.log(disemvowel4('Qué web tan basura!'))
+
+function disemvowel5(str) {
+  return str
+    .replace(/[aeiouáéíóúäëïöüàèìòùâêîôûAEIOUÁÉÍÓÚÄËÏÖÜÀÈÌÒÙÂÊÎÔÛ]/g, '')
+    .toLowerCase()
+}
+
+console.log(disemvowel5('Esta web, pero qué mala es!'))
+
+//* Final Version ✅
+function disemvowel6(str) {
+  return str.replace(/[aeiouáéíóúäëïöüàèìòùâêîôû]/gi, '')
+}
+
+console.log(disemvowel6('Esta web, pero qué mala es!'))
